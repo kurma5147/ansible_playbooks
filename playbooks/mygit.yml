@@ -3,6 +3,6 @@
   became: yes
   task: 
    -name: Install git on all nodes
-      yum:
+      apt:
       name: git
       state: latest
