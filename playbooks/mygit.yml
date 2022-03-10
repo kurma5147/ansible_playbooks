@@ -1,0 +1,8 @@
+---
+- hosts: all
+  became: yes
+  task: 
+   -name: Install git on all nodes
+      yum:
+      name: git
+      state: latest
