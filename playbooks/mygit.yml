@@ -2,7 +2,19 @@
 - hosts: all
   became: yes
   task: 
-   -name: Install git on all nodes
-      apt:
-      name: git
-      state: latest
+   - name: Install git on all nodes
+     apt:
+       name: git
+       state: present
+
+
+   - name: Install wget
+     apt:
+       name: wget
+       state: present
+
+
+   - name: Install tree
+     apt:
+       name: tree
+       state: present    
