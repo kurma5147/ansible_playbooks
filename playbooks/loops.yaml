@@ -4,10 +4,7 @@
   tasks:
   - 
     apt:
-     name: "{{ item }}"
+     name: ['git', 'wget', 'tree' ]
      state: present
     name: "Install git,wget,tree on all nodes" 
-    with_items:
-     - git 
-     - wget
-     - tree 
+    
