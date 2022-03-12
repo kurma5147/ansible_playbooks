@@ -1,10 +1,12 @@
 ---
 - hosts: all
-  become: yes
+  become: true
+  gather_facts: false
   tasks:
   - 
-    apt:
+    yum:
      name: ['git', 'wget', 'tree' ]
      state: present
+     update_cache: yes
     name: "Install git,wget,tree on all nodes" 
     

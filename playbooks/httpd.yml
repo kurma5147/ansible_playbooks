@@ -1,0 +1,16 @@
+---
+  - name: httpd is there
+    hosts: all
+    become: sudo
+    tasks:
+      - name: ensure httpd is there
+        yum:
+         name: httpd
+         state: latest
+
+
+
+
+
+
+

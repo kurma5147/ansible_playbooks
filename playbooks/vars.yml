@@ -1,0 +1,15 @@
+---
+  - hosts: dev
+    become: true
+    vars:
+      var1: Hello...
+      var2: World
+      var3: Welcome to Devops
+    tasks:
+      - name: Print the var1 message
+        debug:
+           msg: "{{var1}}"
+
+      - name: Print the var2 message
+        debug:
+           msg: "{{var2}}"     
