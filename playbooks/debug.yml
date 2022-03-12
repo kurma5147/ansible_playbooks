@@ -1,0 +1,21 @@
+---
+- hosts: all
+  become: true
+  tasks: 
+  - name: Display hostname of all nodes
+    command: hostname -f
+    register: myresult
+
+  - name: Display myresult value
+    debug: 
+      msg: "{{myreuslt}}"  
+
+
+
+---
+- hosts: all
+  become: true
+  tasks: 
+    - name: hostname
+      debug:
+        var=ansible_hostname
