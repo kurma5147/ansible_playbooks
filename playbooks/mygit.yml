@@ -3,18 +3,19 @@
   become: yes
   tasks: 
   - name: Install git on all nodes
-    apt:
+    yum:
        name: git
        state: present
+       update_cache: yes
 
 
   - name: Install wget
-    apt:
+    yum:
        name: wget
        state: present
 
 
   - name: Install tree
-    apt:
+    yum:
       name: tree
       state: present    
