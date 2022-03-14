@@ -3,3 +3,4 @@
   tasks:
   - name: Ping all nodes
     ping:
+    service: present
