@@ -1,9 +1,10 @@
 ---
-  - hosts: group_vars
+  - 
+    hosts: all
     become: true
-    task:
+    tasks:
     - name: Install java on node1
-    yum:
-     name: "{{jdkonredhat}}"
-     state: present
+      yum:
+       name: "{{jdkonredhat}}"
+       state: present
      
