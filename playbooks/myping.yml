@@ -2,6 +2,6 @@
 - hosts: all
   become: true
   tasks:
-  - name: Ping all nodes
-    ping:
-    service: present
+    - name: Ping all nodes
+      ping:
+      service: present
